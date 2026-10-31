@@ -1,0 +1,26 @@
+-- Nozomi Okita QoL. Cough-Cough Disease poisons her at the start of every battle;
+-- the Poison Mask already stops other poison, and now it stops this one too.
+
+local DISEASE = 372 -- Cough-Cough Disease
+local MASK = 195    -- Poison Mask
+local POISONED = 1  -- 状態変化
+
+rq.log("Nozomi Okita QoL: the Poison Mask stops Cough-Cough Disease")
+
+if not rq.chara.install() then error("nozomi-okita-qol: rq.chara.install failed") end
+
+local function wears_mask(iic)
+  local ii = rq.item.equipped(iic).item
+  return ii ~= nil and rq.item.number(ii) == MASK
+end
+
+rq.battle.on_start(function(ctx)
+  for _, iic in ipairs(ctx.allies) do
+    if rq.chara.rank(iic, DISEASE) >= 1 and wears_mask(iic) then
+      local c = rq.chara.get(iic)
+      if c and c.status == POISONED then
+        rq.chara.set(iic, { status = 0 })
+      end
+    end
+  end
+end)
