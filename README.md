@@ -4,6 +4,6 @@ Nozomi's **Cough-Cough Disease** (skill 372) poisons her at the start of every b
 
 It checks the skill, not the character, so anyone with the disease and the mask is covered.
 
-The game's battle log may still print the "poisoned by cough-cough disease" line, because the game writes it before the mod clears the poison.
+The "poisoned by cough-cough disease" line in the battle log is hidden for anyone wearing the mask. Needs loader **0.18.0**.
 
 Local-only git. No remote.
