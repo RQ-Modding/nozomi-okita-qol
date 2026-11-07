@@ -2,9 +2,9 @@
 -- the Poison Mask already stops other poison, and now it stops this one too. The game writes
 -- its log line before rq.battle.on_start, so the line goes as well.
 
-local DISEASE = 372 -- Cough-Cough Disease
-local MASK = 195    -- Poison Mask
-local POISONED = 1  -- 状態変化
+local DISEASE = rq.ids.skill.COUGH_COUGH_DISEASE
+local MASK = rq.ids.item.POISON_MASK
+local POISONED = rq.ids.state.POISON
 local LINE = " is poisoned by cough-cough disease."
 
 rq.log("Nozomi Okita QoL: the Poison Mask stops Cough-Cough Disease")
