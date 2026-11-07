@@ -1,9 +1,28 @@
 # Nozomi Okita QoL
 
-Nozomi's **Cough-Cough Disease** (skill 372) poisons her at the start of every battle, even though the **Poison Mask** (item 195) stops all other poison. With this mod, wearing the mask stops that too. Needs loader **0.15.0**.
+The **Poison Mask** now stops Nozomi Okita's **Cough-Cough Disease**.
 
-It checks the skill, not the character, so anyone with the disease and the mask is covered.
+## What it changes
 
-The "poisoned by cough-cough disease" line in the battle log is hidden for anyone wearing the mask. Needs loader **0.18.0**.
+- Cough-Cough Disease poisons Nozomi at the start of every battle, even though the Poison Mask stops
+  all other poison. With this mod, wearing the mask stops that too.
+- The "is poisoned by cough-cough disease" line in the battle log is hidden for whoever wears the
+  mask.
+- It checks the skill, not the character, so anyone with the disease and the mask is covered.
 
-Local-only git. No remote.
+## Keys and settings
+
+None.
+
+## Saves
+
+Nothing.
+
+## Install
+
+Needs [RQ MOD](https://github.com/RQ-Modding/RQ-Mod) with loader **0.18.0** or newer. Extract the
+release zip into the game's `mods` folder, so that you have `mods/nozomi-okita-qol/mod.json`.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
