@@ -16,13 +16,13 @@ local function wears_mask(iic)
   return ii ~= nil and rq.item.number(ii) == MASK
 end
 
--- The line names the character only by the short name.
+-- The line names the character only by the short name (the game's Ｃ短縮名前, rq.chara.get's short).
 rq.ain.hook("Ｒ８戦闘ログ／追加", {
   before = function(h)
     if not h.args[1]:find(LINE, 1, true) then return end
     for _, u in ipairs(rq.units()) do
       if rq.chara.rank(u.id, DISEASE) >= 1 and wears_mask(u.id)
-        and h.args[1] == "→" .. rq.ain.call("Ｃ短縮名前", u.id, "") .. LINE then
+        and h.args[1] == "→" .. rq.chara.get(u.id).short .. LINE then
         h.skip = true
         return
       end
