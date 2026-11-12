@@ -3,7 +3,7 @@
   "id": "nozomi-okita-qol",
   "name": "Nozomi Okita QoL",
   "author": "Moru Zerinho6",
-  "version": "1.0.3",
-  "loader": "1.15.0",
+  "version": "1.0.4",
+  "loader": "2.37.0",
   "priority": 0
 }

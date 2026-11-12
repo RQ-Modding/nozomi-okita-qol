@@ -3,6 +3,11 @@
 Each section is a version of the mod, the `version` in `mod.json`. The release workflow copies the
 section of a tagged version into the release notes.
 
+## 1.0.4
+
+- The battle log line is dropped through the loader's `rq.battle.on_log` instead of a hook on the
+  game's function, and the `install` line is gone. Needs loader 2.37.0. No change in the game.
+
 ## 1.0.3
 
 - The battle log line is matched with the short name from `rq.chara.get` instead of a call into
